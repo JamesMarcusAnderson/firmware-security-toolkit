@@ -6,13 +6,6 @@ maps ELF sections with resolved names, and flags known vulnerable patterns.
 Firmware Analyst (entry-level) · Reverse Engineer (entry-level) ·
 Security Analyst (embedded)
 
-## Quickstart
-```bash
-python tools/make_sample.py sample.bin     # generates a demo image
-python -m fwtool.main sample.bin --vulns --sections
-python -m fwtool.main sample.bin --vulns --strings --json
-```
-
 ## Output
 See `docs/sample-report.json`, regenerated from `sample.bin` by this code:
 ```
@@ -26,6 +19,13 @@ chips: ST STM32
   [debug interface] console_enable
   [debug interface] debug_uart
   [known-bad RNG] srand(time
+```
+
+## Quickstart
+```bash
+python tools/make_sample.py sample.bin     # generates a demo image
+python -m fwtool.main sample.bin --vulns --sections
+python -m fwtool.main sample.bin --vulns --strings --json
 ```
 
 ## Notes
@@ -53,6 +53,13 @@ python -m pytest tests -q
 18 tests, including one that runs the CLI against `/bin/ls` and asserts real
 section names come back, and one that asserts `docs/sample-report.json` is
 reproducible from a freshly generated image.
+
+## What works
+Format and chip-family identification, strings extraction (capped at 200
+entries, with a truncation flag), 64-bit ELF section mapping with names
+resolved through the section-header string table, de-duplicated
+vulnerability-pattern flags, a JSON report reproducible from a generated
+sample image, and a clean error with exit code 2 on a missing input file.
 
 ## What doesn't
 No DNP3/OPC UA. No fuzzing harness yet. No decompression of wrapped images
