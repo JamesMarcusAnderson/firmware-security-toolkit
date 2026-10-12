@@ -1,0 +1,10 @@
+build/
+*.uf2
+*.elf
+*.bin
+__pycache__/
+*.pyc
+.venv/
+.cache/
+firmware/build/
+.pytest_cache/

@@ -1,0 +1,41 @@
+{
+  "file": "sample.bin",
+  "identify": {
+    "format": "raw",
+    "chip_markers": [
+      "ST STM32"
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "offset": 350,
+      "pattern": "hardcoded password",
+      "match": "admin:hunter2"
+    },
+    {
+      "offset": 396,
+      "pattern": "hardcoded password",
+      "match": "password=Sup3rSecret!"
+    },
+    {
+      "offset": 450,
+      "pattern": "private key",
+      "match": "BEGIN RSA PRIVATE KEY"
+    },
+    {
+      "offset": 673,
+      "pattern": "debug interface",
+      "match": "console_enable"
+    },
+    {
+      "offset": 722,
+      "pattern": "debug interface",
+      "match": "debug_uart"
+    },
+    {
+      "offset": 776,
+      "pattern": "known-bad RNG",
+      "match": "srand(time"
+    }
+  ]
+}
