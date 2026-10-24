@@ -153,3 +153,36 @@ def test_committed_sample_report_is_reproducible(sample):
            [v["pattern"] for v in committed["vulnerabilities"]]
     assert [v["match"] for v in report["vulnerabilities"]] == \
            [v["match"] for v in committed["vulnerabilities"]]
+
+
+def test_elf_sections_parse_32_bit_elf(tmp_path):
+    """New additive support: 32-bit ELF sections must be named, not []."""
+    import struct
+
+    shstrtab = b"\x00.text\x00.shstrtab\x00"
+    e_shoff = 52
+    # ELF32 header: ident(16) + type, machine, version, entry, phoff,
+    # shoff, flags, ehsize, phentsize, phnum, shentsize, shnum, shstrndx
+    header = struct.pack(
+        "<16sHHIIIIIHHHHHH",
+        b"\x7fELF\x01\x01\x01\x00" + b"\x00" * 8,
+        2, 3, 1, 0, 0, e_shoff, 0, 52, 0, 0, 40, 3, 2,
+    )
+    assert len(header) == 52
+
+    def shdr(name, typ, flags, addr, offset, size):
+        # ELF32 section header is 10 x 4-byte fields = 40 bytes
+        return struct.pack("<IIIIIIIIII", name, typ, flags, addr, offset, size,
+                           0, 0, 0, 0)
+
+    body = header
+    body += shdr(0, 0, 0, 0, 0, 0)
+    body += shdr(1, 1, 6, 0, 0, 0)
+    body += shdr(7, 3, 0, 0, e_shoff + 120, len(shstrtab))
+    body += shstrtab
+
+    p = tmp_path / "test32.elf"
+    p.write_bytes(body)
+    result = sections.elf_sections(str(p))
+    assert result is not None
+    assert [s["name"] for s in result] == ["", ".text", ".shstrtab"]
