@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Firmware security report — openwrt-23.05.5-x86-64-generic-ext4-combined.img</title>
+<style>
+body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  max-width: 900px; margin: 2em auto; padding: 0 1.5em; color: #1a1a1a;
+  line-height: 1.5; }
+h1 { font-size: 1.6em; border-bottom: 3px solid #222; padding-bottom: .3em; }
+h2 { font-size: 1.25em; margin-top: 1.8em; border-bottom: 1px solid #ccc;
+  padding-bottom: .2em; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .92em; }
+th, td { border: 1px solid #ddd; padding: .45em .6em; text-align: left;
+  vertical-align: top; }
+th { background: #f2f2f2; }
+code { background: #f4f4f4; padding: .1em .3em; border-radius: 3px;
+  font-size: .88em; word-break: break-all; }
+.sev { display: inline-block; padding: .1em .55em; border-radius: 3px;
+  color: #fff; font-weight: 600; font-size: .85em; }
+.critical { background: #b00020; } .high { background: #d32f2f; }
+.medium { background: #ef6c00; } .low { background: #f9a825; color: #222; }
+.none { background: #757575; } .unknown { background: #9e9e9e; }
+.note { background: #fff8e1; border-left: 4px solid #f9a825; padding: .8em 1em;
+  margin: 1em 0; }
+.good { background: #e8f5e9; border-left: 4px solid #43a047; padding: .8em 1em;
+  margin: 1em 0; }
+.meta { color: #555; }
+footer { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #ccc;
+  color: #666; font-size: .85em; }
+</style>
+</head>
+<body>
+<h1>Firmware security report</h1>
+<p class="meta">Scanned <code>openwrt-23.05.5-x86-64-generic-ext4-combined.img</code> on 2026-11-17T22:38:49Z with fwtool 1.0.0.</p>
+<h2>What was scanned</h2>
+<table>
+<tr><th>File</th><td><code>openwrt-23.05.5-x86-64-generic-ext4-combined.img</code></td></tr>
+<tr><th>Format</th><td>raw</td></tr>
+<tr><th>Size</th><td>126353408 bytes</td></tr>
+<tr><th>Architecture</th><td>not detected</td></tr>
+<tr><th>Chip markers</th><td>none</td></tr>
+<tr><th>Strings found</th><td>199607</td></tr>
+<tr><th>Components identified</th><td>2</td></tr>
+</table>
+<div class="note"><strong>What this report can and cannot say.</strong> Findings come from patterns in the image's strings, from component version banners, and from public CVE data for those versions. This tool does not extract filesystems and does not run the firmware, so it cannot see inside compressed parts of the image and cannot prove a finding is reachable. Every finding shows its evidence — check the evidence before acting.</div>
+<h2>Summary</h2>
+<p><strong>37 finding(s)</strong>: 14 pattern finding(s) and 23 CVE finding(s).</p>
+<table>
+<tr><th>Severity</th><th>Pattern findings</th><th>CVE findings</th></tr>
+<tr><td><span class="sev critical">CRITICAL</span></td><td>0</td><td>3</td></tr>
+<tr><td><span class="sev high">HIGH</span></td><td>0</td><td>6</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>12</td><td>13</td></tr>
+<tr><td><span class="sev low">LOW</span></td><td>2</td><td>1</td></tr>
+</table>
+<h2>Pattern findings</h2>
+<p>Matches in the image's strings. Each one shows the matched text, where it sits in the file, and what to do about it.</p>
+<table>
+<tr><th>Severity</th><th>Finding</th><th>Match</th><th>Offset</th><th>What to do</th></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>debug interface</td><td><code>console=ttyS0</code> <br>(2 occurrences)</td><td>0xb50d9</td><td>Disable debug interfaces in production builds. If a debug path must stay, gate it behind authentication and document it.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>insecure protocol</td><td><code>ftp://</code></td><td>0x16b4774</td><td>Replace Telnet/FTP and old TLS with SSH/SFTP and TLS 1.2 or newer. Plaintext protocols expose credentials and data to anyone on the network path.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>debug interface</td><td><code>telnetd</code></td><td>0x1ca5e88</td><td>Disable debug interfaces in production builds. If a debug path must stay, gate it behind authentication and document it.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>private key</td><td><code>BEGIN PRIVATE KEY</code><br><em>Header only — no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key.</em></td><td>0x1ef0265</td><td>Remove the private key from the firmware immediately and revoke the matching certificate or key pair. A shipped private key is a compromised key.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>private key</td><td><code>BEGIN RSA PRIVATE KEY</code> <br>(2 occurrences)<br><em>Header only — no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key.</em></td><td>0x1ef0288</td><td>Remove the private key from the firmware immediately and revoke the matching certificate or key pair. A shipped private key is a compromised key.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>private key</td><td><code>BEGIN EC PRIVATE KEY</code> <br>(2 occurrences)<br><em>Header only — no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key.</em></td><td>0x1ef02a8</td><td>Remove the private key from the firmware immediately and revoke the matching certificate or key pair. A shipped private key is a compromised key.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>private key</td><td><code>BEGIN ENCRYPTED PRIVATE KEY</code><br><em>Header only — no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key.</em></td><td>0x1ef02f0</td><td>Remove the private key from the firmware immediately and revoke the matching certificate or key pair. A shipped private key is a compromised key.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>weak crypto</td><td><code>RC4</code> <br>(4 occurrences)</td><td>0x1f171e0</td><td>Move to current algorithms (AES-GCM or ChaCha20-Poly1305 for encryption, SHA-256 or better for hashing). MD5, SHA-1, DES, and RC4 are broken for security use.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>insecure protocol</td><td><code>SSLv3</code></td><td>0x1f17b58</td><td>Replace Telnet/FTP and old TLS with SSH/SFTP and TLS 1.2 or newer. Plaintext protocols expose credentials and data to anyone on the network path.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>weak crypto</td><td><code>SHA1_Init</code></td><td>0x24d31e9</td><td>Move to current algorithms (AES-GCM or ChaCha20-Poly1305 for encryption, SHA-256 or better for hashing). MD5, SHA-1, DES, and RC4 are broken for security use.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>weak crypto</td><td><code>MD5_Init</code></td><td>0x24d3823</td><td>Move to current algorithms (AES-GCM or ChaCha20-Poly1305 for encryption, SHA-256 or better for hashing). MD5, SHA-1, DES, and RC4 are broken for security use.</td></tr>
+<tr><td><span class="sev medium">MEDIUM</span></td><td>known-bad RNG</td><td><code>rand()</code></td><td>0x25805b7</td><td>Replace with a cryptographic random source (the OS random device or the platform&#x27;s secure RNG). Predictable randomness breaks keys, sessions, and tokens.</td></tr>
+<tr><td><span class="sev low">LOW</span></td><td>sensitive file reference</td><td><code>/etc/shadow</code> <br>(12 occurrences)</td><td>0x1682c8b</td><td>Check why the firmware touches this file. Reading credential files at runtime is expected for some services and a red flag for others — the context decides.</td></tr>
+<tr><td><span class="sev low">LOW</span></td><td>sensitive file reference</td><td><code>/etc/passwd</code> <br>(19 occurrences)</td><td>0x1682c97</td><td>Check why the firmware touches this file. Reading credential files at runtime is expected for some services and a red flag for others — the context decides.</td></tr>
+</table>
+<h2>Components identified</h2>
+<p>From ELF dynamic-section libraries and version banners. A component with no version was seen but its release version could not be determined, so no CVE lookup was run for it.</p>
+<table>
+<tr><th>Component</th><th>Version</th><th>Evidence</th><th>Source</th></tr>
+<tr><td>BusyBox</td><td>1.36.1</td><td><code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code></td><td>version-string</td></tr>
+<tr><td>mbedTLS</td><td>2.28.9</td><td><code>libmbedcrypto.so.2.28.9</code></td><td>version-string</td></tr>
+</table>
+<h2>CVE findings</h2>
+<p>Public CVEs for the identified component versions, from the National Vulnerability Database. Each finding shows the match basis: the component, its version, the evidence string, and the CPE name that was queried.</p>
+<table>
+<tr><th>CVE</th><th>Severity</th><th>CVSS</th><th>Component</th><th>Description</th><th>Match basis</th></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-48174">CVE-2022-48174</a></td><td><span class="sev critical">CRITICAL</span></td><td>9.8</td><td>BusyBox 1.36.1</td><td>There is a stack overflow vulnerability in ash.c:6030 in busybox before 1.35. In the environment of Internet of Vehicles, this vulnerability can be executed from command to arbitrary code execution.</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-60876">CVE-2025-60876</a></td><td><span class="sev medium">MEDIUM</span></td><td>6.5</td><td>BusyBox 1.36.1</td><td>BusyBox wget thru 1.3.7 accepted raw CR (0x0D)/LF (0x0A) and other C0 control bytes in the HTTP request-target (path/query), allowing the request line to be split and attacker-controlled headers to be injected. To preserve the HTTP/1.1 request-line shape METHOD SP request-target SP HTTP/1.1, a raw space (0x20) in the request-target must also be rejected (clients should use %20).</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42363">CVE-2023-42363</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.5</td><td>BusyBox 1.36.1</td><td>A use-after-free vulnerability was discovered in xasprintf function in xfuncs_printf.c:344 in BusyBox v.1.36.1.</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42364">CVE-2023-42364</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.5</td><td>BusyBox 1.36.1</td><td>A use-after-free vulnerability in BusyBox v.1.36.1 allows attackers to cause a denial of service via a crafted awk pattern in the awk.c evaluate function.</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42365">CVE-2023-42365</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.5</td><td>BusyBox 1.36.1</td><td>A use-after-free vulnerability was discovered in BusyBox v.1.36.1 via a crafted awk pattern in the awk.c copyvar function.</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-42366">CVE-2023-42366</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.5</td><td>BusyBox 1.36.1</td><td>A heap-buffer-overflow was discovered in BusyBox v.1.36.1 in the next_token function at awk.c:1159.</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-46394">CVE-2025-46394</a></td><td><span class="sev low">LOW</span></td><td>3.2</td><td>BusyBox 1.36.1</td><td>In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.</td><td><code>cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*</code><br>evidence: <code>BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34877">CVE-2026-34877</a></td><td><span class="sev critical">CRITICAL</span></td><td>9.8</td><td>mbedTLS 2.28.9</td><td>An issue was discovered in Mbed TLS versions from 2.19.0 up to 3.6.5, Mbed TLS 4.0.0. Insufficient protection of serialized SSL context or session structures allows an attacker who can modify the serialized structures to induce memory corruption, leading to arbitrary code execution. This is caused by Incorrect Use of Privileged APIs.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34872">CVE-2026-34872</a></td><td><span class="sev critical">CRITICAL</span></td><td>9.1</td><td>mbedTLS 2.28.9</td><td>An issue was discovered in Mbed TLS 3.5.x and 3.6.x through 3.6.5 and TF-PSA-Crypto 1.0. There is a lack of contributory behavior in FFDH due to improper input validation. Using finite-field Diffie-Hellman, the other party can force the shared secret into a small set of values (lack of contributory behavior). This is a problem for protocols that depend on contributory behavior (which is not the case for TLS). The attack can be carried by the peer, or depending on the protocol by an active network attacker (person in the middle).</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47917">CVE-2025-47917</a></td><td><span class="sev high">HIGH</span></td><td>8.9</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 3.6.4 allows a use-after-free in certain situations of applications that are developed in accordance with the documentation. The function mbedtls_x509_string_to_names() takes a head argument that is documented as an output argument. The documentation does not suggest that the function will free that pointer; however, the function does call mbedtls_asn1_free_named_data_list() on that argument, which performs a deep free(). As a result, application code that uses this function (relying only on documented behavior) is likely to still hold pointers to the memory blocks that were freed, resulting in a high risk of use-after-free or double-free. In particular, the two sample programs x509/cert_write and x509/cert_req are affected (use-after-free if the san string contains more than one DN).</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52496">CVE-2025-52496</a></td><td><span class="sev high">HIGH</span></td><td>7.8</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 3.6.4 has a race condition in AESNI detection if certain compiler optimizations occur. An attacker may be able to extract an AES key from a multithreaded program, or perform a GCM forgery.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25835">CVE-2026-25835</a></td><td><span class="sev high">HIGH</span></td><td>7.7</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 3.6.6 and TF-PSA-Crypto before 1.1.0 misuse seeds in a Pseudo-Random Number Generator (PRNG).</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45451">CVE-2021-45451</a></td><td><span class="sev high">HIGH</span></td><td>7.5</td><td>mbedTLS 2.28.9</td><td>In Mbed TLS before 3.1.0, psa_aead_generate_nonce allows policy bypass or oracle-based decryption when the output buffer is at memory locations accessible to an untrusted application.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-43666">CVE-2021-43666</a></td><td><span class="sev high">HIGH</span></td><td>7.5</td><td>mbedTLS 2.28.9</td><td>A Denial of Service vulnerability exists in mbed TLS 3.0.0 and earlier in the mbedtls_pkcs12_derivation function when an input password&#x27;s length is 0.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-52353">CVE-2023-52353</a></td><td><span class="sev high">HIGH</span></td><td>7.5</td><td>mbedTLS 2.28.9</td><td>An issue was discovered in Mbed TLS through 3.5.1. In mbedtls_ssl_session_reset, the maximum negotiable TLS version is mishandled. For example, if the last connection negotiated TLS 1.2, then 1.2 becomes the new maximum.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34871">CVE-2026-34871</a></td><td><span class="sev medium">MEDIUM</span></td><td>6.7</td><td>mbedTLS 2.28.9</td><td>An issue was discovered in Mbed TLS before 3.6.6 and 4.x before 4.1.0 and TF-PSA-Crypto before 1.1.0. There is a Predictable Seed in a Pseudo-Random Number Generator (PRNG).</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54764">CVE-2025-54764</a></td><td><span class="sev medium">MEDIUM</span></td><td>6.2</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 3.6.5 allows a local timing attack against certain RSA operations, and direct calls to mbedtls_mpi_mod_inv or mbedtls_mpi_gcd.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27809">CVE-2025-27809</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.4</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 2.28.10 and 3.x before 3.6.3, on the client side, accepts servers that have trusted certificates for arbitrary hostnames unless the TLS client application calls mbedtls_ssl_set_hostname.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27810">CVE-2025-27810</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.4</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 2.28.10 and 3.x before 3.6.3, in some cases of failed memory allocation or hardware errors, uses uninitialized stack memory to compose the TLS Finished message, potentially leading to authentication bypasses such as replays.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59438">CVE-2025-59438</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.3</td><td>mbedTLS 2.28.9</td><td>Mbed TLS through 3.6.4 has an Observable Timing Discrepancy.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-66442">CVE-2025-66442</a></td><td><span class="sev medium">MEDIUM</span></td><td>5.1</td><td>mbedTLS 2.28.9</td><td>In Mbed TLS through 4.0.0, there is a compiler-induced timing side channel (in RSA and CBC/ECB decryption) that only occurs with LLVM&#x27;s select-optimize feature. TF-PSA-Crypto through 1.0.0 is also affected.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52497">CVE-2025-52497</a></td><td><span class="sev medium">MEDIUM</span></td><td>4.8</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 3.6.4 has a PEM parsing one-byte heap-based buffer underflow, in mbedtls_pem_read_buffer and two mbedtls_pk_parse functions, via untrusted PEM input.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-48965">CVE-2025-48965</a></td><td><span class="sev medium">MEDIUM</span></td><td>4.0</td><td>mbedTLS 2.28.9</td><td>Mbed TLS before 3.6.4 has a NULL pointer dereference because mbedtls_asn1_store_named_data can trigger conflicting data with val.p of NULL but val.len greater than zero.</td><td><code>cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*</code><br>evidence: <code>libmbedcrypto.so.2.28.9</code> (version-string)</td></tr>
+</table>
+<h2>Honest limits</h2>
+<ul>
+<li>No filesystem extraction: compressed or packed parts of the image (SquashFS, gzip, xz, …) are identified, not unpacked, so components inside them are only visible if their strings or banners leak into the raw image.</li>
+<li>The SBOM is component-fingerprint-based: it lists components found via ELF dynamic-section libraries and version-banner strings. It is not a full inventory of an extracted filesystem.</li>
+<li>CVE findings are version matches against public NVD data. A CVE listed for a component version means that version is recorded as affected; it does not prove the vulnerable code path is reachable in this firmware.</li>
+<li>Pattern findings are string matches. Every finding shows its evidence — check the evidence in context before acting.</li>
+<li>Chip markers are searched in the first 64 KiB only; the window actually scanned is reported in the output.</li>
+</ul>
+<footer>Generated by fwtool 1.0.0. CVE data: National Vulnerability Database (public data). This report is a triage aid, not a security certification.</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "fwtool SBOM for openwrt-23.05.5-x86-64-generic-ext4-combined.img",
+  "documentNamespace": "https://fwtool.invalid/spdx/4b7bec65-47c2-49e9-8222-8f60e34d0b9c",
+  "comment": "Component-fingerprint-based SBOM: components were identified from ELF dynamic-section libraries and version-banner strings in the firmware image. This tool version does not extract filesystems, so the inventory is limited to components that leave such a trace. It is not a full extracted-filesystem SBOM.",
+  "creationInfo": {
+    "created": "2026-11-17T22:38:58Z",
+    "creators": [
+      "Tool: fwtool-1.0.0"
+    ]
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-BusyBox",
+      "name": "BusyBox",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "supplier": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Evidence: BusyBox v1.36.1 (2024-09-23 12:34:46 UTC) (source: version-string). Component-fingerprint-based SBOM; no filesystem extraction.",
+      "versionInfo": "1.36.1",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-mbedTLS",
+      "name": "mbedTLS",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "supplier": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Evidence: libmbedcrypto.so.2.28.9 (source: version-string). Component-fingerprint-based SBOM; no filesystem extraction.",
+      "versionInfo": "2.28.9",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-BusyBox"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-mbedTLS"
+    }
+  ]
+}

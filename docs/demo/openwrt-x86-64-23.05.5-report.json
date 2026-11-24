@@ -1,0 +1,1597 @@
+{
+  "file": "openwrt-23.05.5-x86-64-generic-ext4-combined.img",
+  "tool": {
+    "name": "fwtool",
+    "version": "1.0.0"
+  },
+  "scanned_at": "2026-11-17T22:38:49Z",
+  "identify": {
+    "format": "raw",
+    "chip_markers": [],
+    "size": 126353408,
+    "marker_scan_bytes": 65536
+  },
+  "limits": [
+    "No filesystem extraction: compressed or packed parts of the image (SquashFS, gzip, xz, \u2026) are identified, not unpacked, so components inside them are only visible if their strings or banners leak into the raw image.",
+    "The SBOM is component-fingerprint-based: it lists components found via ELF dynamic-section libraries and version-banner strings. It is not a full inventory of an extracted filesystem.",
+    "CVE findings are version matches against public NVD data. A CVE listed for a component version means that version is recorded as affected; it does not prove the vulnerable code path is reachable in this firmware.",
+    "Pattern findings are string matches. Every finding shows its evidence \u2014 check the evidence in context before acting.",
+    "Chip markers are searched in the first 64 KiB only; the window actually scanned is reported in the output."
+  ],
+  "sections": null,
+  "strings_found": 199607,
+  "strings": [
+    {
+      "offset": 157,
+      "string": "ZRr="
+    },
+    {
+      "offset": 287,
+      "string": "\\|f1"
+    },
+    {
+      "offset": 384,
+      "string": "GRUB "
+    },
+    {
+      "offset": 390,
+      "string": "Geom"
+    },
+    {
+      "offset": 395,
+      "string": "Hard Disk"
+    },
+    {
+      "offset": 405,
+      "string": "Read"
+    },
+    {
+      "offset": 410,
+      "string": " Error"
+    },
+    {
+      "offset": 795,
+      "string": "loading"
+    },
+    {
+      "offset": 808,
+      "string": "Geom"
+    },
+    {
+      "offset": 813,
+      "string": "Read"
+    },
+    {
+      "offset": 818,
+      "string": " Error"
+    },
+    {
+      "offset": 1484,
+      "string": "[^_]"
+    },
+    {
+      "offset": 1933,
+      "string": "<[^_]"
+    },
+    {
+      "offset": 2720,
+      "string": "L[^_]"
+    },
+    {
+      "offset": 3130,
+      "string": "RBRPQR"
+    },
+    {
+      "offset": 4014,
+      "string": "&ql`"
+    },
+    {
+      "offset": 4026,
+      "string": "Yu05"
+    },
+    {
+      "offset": 4152,
+      "string": "wl6`K7"
+    },
+    {
+      "offset": 4161,
+      "string": "xc?|"
+    },
+    {
+      "offset": 4266,
+      "string": "3>9/A"
+    },
+    {
+      "offset": 4331,
+      "string": "qPr)"
+    },
+    {
+      "offset": 4351,
+      "string": ">ea8"
+    },
+    {
+      "offset": 4383,
+      "string": "8_]C"
+    },
+    {
+      "offset": 4532,
+      "string": "g9~bK"
+    },
+    {
+      "offset": 4549,
+      "string": "T(\\+"
+    },
+    {
+      "offset": 4589,
+      "string": "Blf{"
+    },
+    {
+      "offset": 4707,
+      "string": "(T<$"
+    },
+    {
+      "offset": 4764,
+      "string": "TWB{"
+    },
+    {
+      "offset": 4795,
+      "string": "C-+G"
+    },
+    {
+      "offset": 4989,
+      "string": "\"B;E"
+    },
+    {
+      "offset": 4998,
+      "string": "-eZ:"
+    },
+    {
+      "offset": 5097,
+      "string": "UUrd"
+    },
+    {
+      "offset": 5222,
+      "string": "@W3Tf"
+    },
+    {
+      "offset": 5386,
+      "string": "7IOK"
+    },
+    {
+      "offset": 5392,
+      "string": "I06-{"
+    },
+    {
+      "offset": 5451,
+      "string": "Hb0Dl"
+    },
+    {
+      "offset": 5473,
+      "string": "dY9#c"
+    },
+    {
+      "offset": 5802,
+      "string": "4U8 "
+    },
+    {
+      "offset": 5841,
+      "string": "[=rQ"
+    },
+    {
+      "offset": 5894,
+      "string": "s|DusxN2"
+    },
+    {
+      "offset": 5973,
+      "string": "wXe<"
+    },
+    {
+      "offset": 6005,
+      "string": "S&lPu"
+    },
+    {
+      "offset": 6043,
+      "string": "dgjN"
+    },
+    {
+      "offset": 6170,
+      "string": "wjZL"
+    },
+    {
+      "offset": 6250,
+      "string": "%\"&U"
+    },
+    {
+      "offset": 6550,
+      "string": "jU&t"
+    },
+    {
+      "offset": 6728,
+      "string": "L/\\<"
+    },
+    {
+      "offset": 6811,
+      "string": "sQ,bn"
+    },
+    {
+      "offset": 6828,
+      "string": "[B!,"
+    },
+    {
+      "offset": 6835,
+      "string": "#|qX"
+    },
+    {
+      "offset": 6900,
+      "string": "+I}O"
+    },
+    {
+      "offset": 6960,
+      "string": "Gzm1AEU"
+    },
+    {
+      "offset": 7021,
+      "string": "vCfXs"
+    },
+    {
+      "offset": 7101,
+      "string": "U%G/"
+    },
+    {
+      "offset": 7124,
+      "string": "sGR0"
+    },
+    {
+      "offset": 7372,
+      "string": "?4K."
+    },
+    {
+      "offset": 7416,
+      "string": "sNr-K"
+    },
+    {
+      "offset": 7442,
+      "string": "p[|Oh"
+    },
+    {
+      "offset": 7464,
+      "string": "72R(f:"
+    },
+    {
+      "offset": 7616,
+      "string": ";;z(rI"
+    },
+    {
+      "offset": 7676,
+      "string": "EK|i("
+    },
+    {
+      "offset": 7752,
+      "string": "U}*E,,"
+    },
+    {
+      "offset": 7879,
+      "string": "/,II"
+    },
+    {
+      "offset": 7943,
+      "string": "HTNz"
+    },
+    {
+      "offset": 7964,
+      "string": "lZOi_"
+    },
+    {
+      "offset": 8057,
+      "string": "Rh;:"
+    },
+    {
+      "offset": 8084,
+      "string": "[QeR"
+    },
+    {
+      "offset": 8103,
+      "string": "xGG,R"
+    },
+    {
+      "offset": 8274,
+      "string": "':]pt"
+    },
+    {
+      "offset": 8326,
+      "string": "kQEs"
+    },
+    {
+      "offset": 8343,
+      "string": "L!VC!(H"
+    },
+    {
+      "offset": 8448,
+      "string": "Bfiw"
+    },
+    {
+      "offset": 8662,
+      "string": "AF|5"
+    },
+    {
+      "offset": 8733,
+      "string": ",,N:"
+    },
+    {
+      "offset": 8766,
+      "string": "@<F{"
+    },
+    {
+      "offset": 8774,
+      "string": "PI}G"
+    },
+    {
+      "offset": 8809,
+      "string": "Dq1}"
+    },
+    {
+      "offset": 8859,
+      "string": "ohB4"
+    },
+    {
+      "offset": 8914,
+      "string": "z!~]\""
+    },
+    {
+      "offset": 8936,
+      "string": "jH%y3"
+    },
+    {
+      "offset": 8980,
+      "string": "l\"j*"
+    },
+    {
+      "offset": 9065,
+      "string": "bPl*"
+    },
+    {
+      "offset": 9144,
+      "string": "uUkmQ"
+    },
+    {
+      "offset": 9459,
+      "string": "DW*]"
+    },
+    {
+      "offset": 9556,
+      "string": "^ vR"
+    },
+    {
+      "offset": 9585,
+      "string": "PA~St"
+    },
+    {
+      "offset": 9689,
+      "string": "$q.A"
+    },
+    {
+      "offset": 10098,
+      "string": "vEv="
+    },
+    {
+      "offset": 10268,
+      "string": "3qC\\"
+    },
+    {
+      "offset": 10276,
+      "string": "4lM-b"
+    },
+    {
+      "offset": 10324,
+      "string": "WdJbI"
+    },
+    {
+      "offset": 10354,
+      "string": "<J}XK"
+    },
+    {
+      "offset": 10374,
+      "string": "3o7uE"
+    },
+    {
+      "offset": 10585,
+      "string": "ckv;"
+    },
+    {
+      "offset": 10632,
+      "string": "\\>-w"
+    },
+    {
+      "offset": 10677,
+      "string": "[P-9"
+    },
+    {
+      "offset": 10737,
+      "string": "Q<P "
+    },
+    {
+      "offset": 10897,
+      "string": "YCBT"
+    },
+    {
+      "offset": 10919,
+      "string": ":.B=CO"
+    },
+    {
+      "offset": 10934,
+      "string": "q/>}"
+    },
+    {
+      "offset": 11136,
+      "string": "qPfn"
+    },
+    {
+      "offset": 11205,
+      "string": "h^i."
+    },
+    {
+      "offset": 11248,
+      "string": "2bYY"
+    },
+    {
+      "offset": 11476,
+      "string": "E6\\|&b"
+    },
+    {
+      "offset": 11485,
+      "string": "bl,5"
+    },
+    {
+      "offset": 11555,
+      "string": "2eWmR{"
+    },
+    {
+      "offset": 11765,
+      "string": "=Tesy"
+    },
+    {
+      "offset": 11881,
+      "string": ";PJl9"
+    },
+    {
+      "offset": 12354,
+      "string": "), #v"
+    },
+    {
+      "offset": 12403,
+      "string": "h3U?"
+    },
+    {
+      "offset": 12458,
+      "string": "4CWD+^"
+    },
+    {
+      "offset": 12531,
+      "string": "C>1="
+    },
+    {
+      "offset": 12779,
+      "string": "/x\\~*"
+    },
+    {
+      "offset": 12820,
+      "string": "*pW1"
+    },
+    {
+      "offset": 12846,
+      "string": "/Dd&"
+    },
+    {
+      "offset": 12885,
+      "string": "AY$i"
+    },
+    {
+      "offset": 13003,
+      "string": "^:u&"
+    },
+    {
+      "offset": 13091,
+      "string": "1@2^"
+    },
+    {
+      "offset": 13154,
+      "string": "m+^G"
+    },
+    {
+      "offset": 13181,
+      "string": "ansJh>o"
+    },
+    {
+      "offset": 13287,
+      "string": "Sug<"
+    },
+    {
+      "offset": 13354,
+      "string": "7YJX*"
+    },
+    {
+      "offset": 13516,
+      "string": "Vim`"
+    },
+    {
+      "offset": 13521,
+      "string": "5t:j"
+    },
+    {
+      "offset": 13531,
+      "string": "tcb7"
+    },
+    {
+      "offset": 13541,
+      "string": "yIYP"
+    },
+    {
+      "offset": 13575,
+      "string": "&'[&"
+    },
+    {
+      "offset": 13601,
+      "string": "o_|d"
+    },
+    {
+      "offset": 13804,
+      "string": "4wf'"
+    },
+    {
+      "offset": 13830,
+      "string": "OL4r("
+    },
+    {
+      "offset": 14095,
+      "string": "q4ue"
+    },
+    {
+      "offset": 14123,
+      "string": "$3jH"
+    },
+    {
+      "offset": 14130,
+      "string": "mqJ_a?"
+    },
+    {
+      "offset": 14158,
+      "string": "Fa3o"
+    },
+    {
+      "offset": 14634,
+      "string": "{JA%"
+    },
+    {
+      "offset": 14773,
+      "string": "PRF /"
+    },
+    {
+      "offset": 14847,
+      "string": "(+NWQ7"
+    },
+    {
+      "offset": 14921,
+      "string": "I@'u-"
+    },
+    {
+      "offset": 14953,
+      "string": "me`2$"
+    },
+    {
+      "offset": 15030,
+      "string": "L@DL"
+    },
+    {
+      "offset": 15071,
+      "string": "Do^cVn"
+    },
+    {
+      "offset": 15156,
+      "string": "9C+$"
+    },
+    {
+      "offset": 15309,
+      "string": "PN\\c"
+    },
+    {
+      "offset": 15320,
+      "string": "3`:_"
+    },
+    {
+      "offset": 15520,
+      "string": "$LoUx"
+    },
+    {
+      "offset": 15545,
+      "string": "gGlvj1"
+    },
+    {
+      "offset": 15555,
+      "string": "+XCh"
+    },
+    {
+      "offset": 15570,
+      "string": "PC*Tk"
+    },
+    {
+      "offset": 15583,
+      "string": "u=^0S"
+    },
+    {
+      "offset": 15635,
+      "string": "DIg'"
+    },
+    {
+      "offset": 15700,
+      "string": "M| %"
+    },
+    {
+      "offset": 15722,
+      "string": "9v>TA"
+    },
+    {
+      "offset": 15785,
+      "string": "}9EU"
+    },
+    {
+      "offset": 15821,
+      "string": "\";fjk"
+    },
+    {
+      "offset": 15908,
+      "string": ">hP#D"
+    },
+    {
+      "offset": 15939,
+      "string": "jf}t"
+    },
+    {
+      "offset": 15990,
+      "string": "?km;"
+    },
+    {
+      "offset": 16118,
+      "string": "9P\"G"
+    },
+    {
+      "offset": 16222,
+      "string": "FBv62Qr"
+    },
+    {
+      "offset": 16261,
+      "string": "cei^"
+    },
+    {
+      "offset": 16702,
+      "string": "LAW6"
+    },
+    {
+      "offset": 16714,
+      "string": "UU]Q"
+    },
+    {
+      "offset": 16934,
+      "string": "A!D "
+    },
+    {
+      "offset": 17025,
+      "string": "@]5^"
+    },
+    {
+      "offset": 17066,
+      "string": "*\"/L"
+    },
+    {
+      "offset": 17278,
+      "string": "I'BJ"
+    },
+    {
+      "offset": 17320,
+      "string": " @6z"
+    },
+    {
+      "offset": 17335,
+      "string": "`VTsE;"
+    },
+    {
+      "offset": 17372,
+      "string": "LF!_^"
+    },
+    {
+      "offset": 17407,
+      "string": "9Q9'"
+    },
+    {
+      "offset": 17446,
+      "string": "@.mF"
+    },
+    {
+      "offset": 17560,
+      "string": "]X<b{"
+    },
+    {
+      "offset": 17598,
+      "string": "N>L;3"
+    },
+    {
+      "offset": 17684,
+      "string": "fh%4"
+    },
+    {
+      "offset": 17835,
+      "string": "<C$9"
+    },
+    {
+      "offset": 17883,
+      "string": "}zoM"
+    },
+    {
+      "offset": 17936,
+      "string": "IG6K"
+    },
+    {
+      "offset": 18013,
+      "string": "4h70"
+    },
+    {
+      "offset": 18058,
+      "string": "[eI3"
+    },
+    {
+      "offset": 18175,
+      "string": "\"a9Z"
+    },
+    {
+      "offset": 18201,
+      "string": ":ZR9"
+    },
+    {
+      "offset": 18260,
+      "string": "._jp"
+    },
+    {
+      "offset": 18398,
+      "string": "z&#>"
+    },
+    {
+      "offset": 18518,
+      "string": "]D%~"
+    },
+    {
+      "offset": 18706,
+      "string": "C{fF"
+    },
+    {
+      "offset": 18921,
+      "string": "(2s."
+    },
+    {
+      "offset": 18949,
+      "string": "ofIf"
+    },
+    {
+      "offset": 19011,
+      "string": "$>!0"
+    },
+    {
+      "offset": 19154,
+      "string": "r])y&#"
+    },
+    {
+      "offset": 19498,
+      "string": "KM9C-"
+    },
+    {
+      "offset": 19525,
+      "string": "FR@(v"
+    },
+    {
+      "offset": 19656,
+      "string": "74$@"
+    },
+    {
+      "offset": 19686,
+      "string": "c(*b"
+    },
+    {
+      "offset": 19714,
+      "string": "FJD="
+    },
+    {
+      "offset": 19753,
+      "string": "Zvm="
+    },
+    {
+      "offset": 19782,
+      "string": "_\\Nx"
+    },
+    {
+      "offset": 19874,
+      "string": "%KQqRe"
+    },
+    {
+      "offset": 20015,
+      "string": "(;y}"
+    },
+    {
+      "offset": 20075,
+      "string": "fjTc"
+    },
+    {
+      "offset": 20140,
+      "string": "v:hXr"
+    }
+  ],
+  "strings_truncated": true,
+  "vulnerabilities": [
+    {
+      "offset": 741593,
+      "pattern": "debug interface",
+      "severity": "medium",
+      "match": "console=ttyS0",
+      "context": "linux /boot/vmlinuz root=PARTUUID=a21fa13b-02 rootwait  console=tty0 console=ttyS0,115200n8 noinitrd",
+      "occurrences": 2
+    },
+    {
+      "offset": 23604363,
+      "pattern": "sensitive file reference",
+      "severity": "low",
+      "match": "/etc/shadow",
+      "context": "/etc/shadow",
+      "occurrences": 12
+    },
+    {
+      "offset": 23604375,
+      "pattern": "sensitive file reference",
+      "severity": "low",
+      "match": "/etc/passwd",
+      "context": "/etc/passwd",
+      "occurrences": 19
+    },
+    {
+      "offset": 23807860,
+      "pattern": "insecure protocol",
+      "severity": "medium",
+      "match": "ftp://",
+      "context": "ftp://",
+      "occurrences": 1
+    },
+    {
+      "offset": 30039688,
+      "pattern": "debug interface",
+      "severity": "medium",
+      "match": "telnetd",
+      "context": "killall -9 telnetd 2>/dev/null",
+      "occurrences": 1
+    },
+    {
+      "offset": 32440933,
+      "pattern": "private key",
+      "severity": "medium",
+      "match": "BEGIN PRIVATE KEY",
+      "context": "-----BEGIN PRIVATE KEY-----",
+      "occurrences": 1,
+      "note": "Header only \u2014 no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key."
+    },
+    {
+      "offset": 32440968,
+      "pattern": "private key",
+      "severity": "medium",
+      "match": "BEGIN RSA PRIVATE KEY",
+      "context": "-----BEGIN RSA PRIVATE KEY-----",
+      "occurrences": 2,
+      "note": "Header only \u2014 no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key."
+    },
+    {
+      "offset": 32441000,
+      "pattern": "private key",
+      "severity": "medium",
+      "match": "BEGIN EC PRIVATE KEY",
+      "context": "-----BEGIN EC PRIVATE KEY-----",
+      "occurrences": 2,
+      "note": "Header only \u2014 no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key."
+    },
+    {
+      "offset": 32441072,
+      "pattern": "private key",
+      "severity": "medium",
+      "match": "BEGIN ENCRYPTED PRIVATE KEY",
+      "context": "-----BEGIN ENCRYPTED PRIVATE KEY-----",
+      "occurrences": 1,
+      "note": "Header only \u2014 no key material follows in the file. This is often a header constant inside a crypto library, not an embedded key."
+    },
+    {
+      "offset": 32600544,
+      "pattern": "weak crypto",
+      "severity": "medium",
+      "match": "RC4",
+      "context": "TLS-ECDHE-ECDSA-WITH-RC4-128-SHA",
+      "occurrences": 4
+    },
+    {
+      "offset": 32602968,
+      "pattern": "insecure protocol",
+      "severity": "medium",
+      "match": "SSLv3",
+      "context": "SSLv3.0",
+      "occurrences": 1
+    },
+    {
+      "offset": 38613481,
+      "pattern": "weak crypto",
+      "severity": "medium",
+      "match": "SHA1_Init",
+      "context": "SHA1_Init",
+      "occurrences": 1
+    },
+    {
+      "offset": 38615075,
+      "pattern": "weak crypto",
+      "severity": "medium",
+      "match": "MD5_Init",
+      "context": "MD5_Init",
+      "occurrences": 1
+    },
+    {
+      "offset": 39323063,
+      "pattern": "known-bad RNG",
+      "severity": "medium",
+      "match": "rand()",
+      "context": "push(bytes, sprintf('%02x', rand() % 256));",
+      "occurrences": 1
+    }
+  ],
+  "components": [
+    {
+      "name": "BusyBox",
+      "version": "1.36.1",
+      "update": null,
+      "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+      "evidence_source": "version-string",
+      "offset": 23610070,
+      "sightings": 1,
+      "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*"
+    },
+    {
+      "name": "mbedTLS",
+      "version": "2.28.9",
+      "update": null,
+      "evidence": "libmbedcrypto.so.2.28.9",
+      "evidence_source": "version-string",
+      "offset": 17508648,
+      "sightings": 6,
+      "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*"
+    }
+  ],
+  "cve_findings": [
+    {
+      "id": "CVE-2022-48174",
+      "description": "There is a stack overflow vulnerability in ash.c:6030 in busybox before 1.35. In the environment of Internet of Vehicles, this vulnerability can be executed from command to arbitrary code execution.",
+      "published": "2023-08-22T19:16:31.080",
+      "modified": "2026-07-14T12:16:48.240",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "severity": "critical",
+      "references": [
+        "https://bugs.busybox.net/show_bug.cgi?id=15216",
+        "https://bugs.busybox.net/show_bug.cgi?id=15216",
+        "https://lists.debian.org/debian-lts-announce/2025/01/msg00012.html",
+        "https://security.netapp.com/advisory/ntap-20241129-0001/",
+        "https://cert-portal.siemens.com/productcert/html/ssa-089022.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2025-60876",
+      "description": "BusyBox wget thru 1.3.7 accepted raw CR (0x0D)/LF (0x0A) and other C0 control bytes in the HTTP request-target (path/query), allowing the request line to be split and attacker-controlled headers to be injected. To preserve the HTTP/1.1 request-line shape METHOD SP request-target SP HTTP/1.1, a raw space (0x20) in the request-target must also be rejected (clients should use %20).",
+      "published": "2025-11-10T20:15:48.683",
+      "modified": "2026-06-17T09:50:10.330",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://gist.github.com/subyumatest/41554af6a72aedaacaec026adc311092",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250823/ccdc96ef/attachment-0001.htm",
+        "https://lists.busybox.net/pipermail/busybox/attachments/20250828/e7f90492/attachment.htm",
+        "https://cert-portal.siemens.com/productcert/html/ssa-253495.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60876",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2023-42363",
+      "description": "A use-after-free vulnerability was discovered in xasprintf function in xfuncs_printf.c:344 in BusyBox v.1.36.1.",
+      "published": "2023-11-27T22:15:07.940",
+      "modified": "2026-06-17T06:23:46.477",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+      },
+      "severity": "medium",
+      "references": [
+        "https://bugs.busybox.net/show_bug.cgi?id=15865",
+        "https://bugs.busybox.net/show_bug.cgi?id=15865"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42363",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2023-42364",
+      "description": "A use-after-free vulnerability in BusyBox v.1.36.1 allows attackers to cause a denial of service via a crafted awk pattern in the awk.c evaluate function.",
+      "published": "2023-11-27T23:15:07.313",
+      "modified": "2026-06-17T06:23:46.627",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+      },
+      "severity": "medium",
+      "references": [
+        "https://bugs.busybox.net/show_bug.cgi?id=15868",
+        "https://bugs.busybox.net/show_bug.cgi?id=15868",
+        "https://lists.debian.org/debian-lts-announce/2025/01/msg00012.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42364",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2023-42365",
+      "description": "A use-after-free vulnerability was discovered in BusyBox v.1.36.1 via a crafted awk pattern in the awk.c copyvar function.",
+      "published": "2023-11-27T23:15:07.373",
+      "modified": "2026-06-17T06:23:46.837",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+      },
+      "severity": "medium",
+      "references": [
+        "https://bugs.busybox.net/show_bug.cgi?id=15871",
+        "https://bugs.busybox.net/show_bug.cgi?id=15871",
+        "https://lists.debian.org/debian-lts-announce/2025/01/msg00012.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42365",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2023-42366",
+      "description": "A heap-buffer-overflow was discovered in BusyBox v.1.36.1 in the next_token function at awk.c:1159.",
+      "published": "2023-11-27T23:15:07.420",
+      "modified": "2026-10-08T22:17:24.960",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+      },
+      "severity": "medium",
+      "references": [
+        "https://bugs.busybox.net/show_bug.cgi?id=15874",
+        "https://bugs.busybox.net/show_bug.cgi?id=15874",
+        "https://security.netapp.com/advisory/ntap-20241206-0007/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42366",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2025-46394",
+      "description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+      "published": "2025-04-23T16:15:48.713",
+      "modified": "2026-06-17T09:26:20.320",
+      "cvss": {
+        "version": "3.1",
+        "score": 3.2,
+        "severity": "LOW",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N"
+      },
+      "severity": "low",
+      "references": [
+        "https://bugs.busybox.net/show_bug.cgi?id=16018",
+        "https://www.busybox.net",
+        "https://www.busybox.net/downloads/",
+        "http://www.openwall.com/lists/oss-security/2025/04/23/5",
+        "http://www.openwall.com/lists/oss-security/2025/04/24/3"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+      "component": "BusyBox",
+      "component_version": "1.36.1",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*",
+        "evidence": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)",
+        "evidence_source": "version-string",
+        "offset": 23610070
+      }
+    },
+    {
+      "id": "CVE-2026-34877",
+      "description": "An issue was discovered in Mbed TLS versions from 2.19.0 up to 3.6.5, Mbed TLS 4.0.0. Insufficient protection of serialized SSL context or session structures allows an attacker who can modify the serialized structures to induce memory corruption, leading to arbitrary code execution. This is caused by Incorrect Use of Privileged APIs.",
+      "published": "2026-04-02T17:16:26.927",
+      "modified": "2026-07-24T21:10:00.143",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      "severity": "critical",
+      "references": [
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-serialized-data/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34877",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2026-34872",
+      "description": "An issue was discovered in Mbed TLS 3.5.x and 3.6.x through 3.6.5 and TF-PSA-Crypto 1.0. There is a lack of contributory behavior in FFDH due to improper input validation. Using finite-field Diffie-Hellman, the other party can force the shared secret into a small set of values (lack of contributory behavior). This is a problem for protocols that depend on contributory behavior (which is not the case for TLS). The attack can be carried by the peer, or depending on the protocol by an active network attacker (person in the middle).",
+      "published": "2026-04-01T20:16:27.493",
+      "modified": "2026-06-17T10:39:46.057",
+      "cvss": {
+        "version": "3.1",
+        "score": 9.1,
+        "severity": "CRITICAL",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "severity": "critical",
+      "references": [
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-ffdh-peerkey-checks/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34872",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-47917",
+      "description": "Mbed TLS before 3.6.4 allows a use-after-free in certain situations of applications that are developed in accordance with the documentation. The function mbedtls_x509_string_to_names() takes a head argument that is documented as an output argument. The documentation does not suggest that the function will free that pointer; however, the function does call mbedtls_asn1_free_named_data_list() on that argument, which performs a deep free(). As a result, application code that uses this function (relying only on documented behavior) is likely to still hold pointers to the memory blocks that were freed, resulting in a high risk of use-after-free or double-free. In particular, the two sample programs x509/cert_write and x509/cert_req are affected (use-after-free if the san string contains more than one DN).",
+      "published": "2025-07-20T19:15:23.847",
+      "modified": "2026-06-17T09:28:50.790",
+      "cvss": {
+        "version": "3.1",
+        "score": 8.9,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:H"
+      },
+      "severity": "high",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls-docs/blob/main/security-advisories/mbedtls-security-advisory-2025-06-7.md",
+        "https://mbed-tls.readthedocs.io/en/latest/tech-updates/security-advisories/",
+        "https://lists.debian.org/debian-lts-announce/2025/08/msg00013.html",
+        "https://lists.debian.org/debian-lts-announce/2025/08/msg00025.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47917",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-52496",
+      "description": "Mbed TLS before 3.6.4 has a race condition in AESNI detection if certain compiler optimizations occur. An attacker may be able to extract an AES key from a multithreaded program, or perform a GCM forgery.",
+      "published": "2025-07-04T15:15:22.633",
+      "modified": "2026-06-17T09:36:36.130",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.8,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
+      },
+      "severity": "high",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls-docs/blob/main/security-advisories/mbedtls-security-advisory-2025-06-1.md",
+        "https://lists.debian.org/debian-lts-announce/2025/08/msg00013.html",
+        "https://github.com/Mbed-TLS/mbedtls-docs/blob/main/security-advisories/mbedtls-security-advisory-2025-06-1.md"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52496",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2026-25835",
+      "description": "Mbed TLS before 3.6.6 and TF-PSA-Crypto before 1.1.0 misuse seeds in a Pseudo-Random Number Generator (PRNG).",
+      "published": "2026-04-01T19:16:28.663",
+      "modified": "2026-11-11T19:10:00.360",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.7,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "severity": "high",
+      "references": [
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-rng-cloning/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25835",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2021-45451",
+      "description": "In Mbed TLS before 3.1.0, psa_aead_generate_nonce allows policy bypass or oracle-based decryption when the output buffer is at memory locations accessible to an untrusted application.",
+      "published": "2021-12-21T07:15:06.860",
+      "modified": "2026-06-17T04:13:23.707",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "severity": "high",
+      "references": [
+        "https://github.com/ARMmbed/mbedtls/releases/tag/v3.1.0",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IL66WKJGXY5AXMTFE7QDMGL3RIBD6PX5/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TALJHOYAYSUJTLN6BYGLO4YJGNZUY74W/",
+        "https://github.com/ARMmbed/mbedtls/releases/tag/v3.1.0",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IL66WKJGXY5AXMTFE7QDMGL3RIBD6PX5/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-45451",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2021-43666",
+      "description": "A Denial of Service vulnerability exists in mbed TLS 3.0.0 and earlier in the mbedtls_pkcs12_derivation function when an input password's length is 0.",
+      "published": "2022-03-24T18:15:08.333",
+      "modified": "2026-06-17T04:11:14.677",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      "severity": "high",
+      "references": [
+        "https://github.com/ARMmbed/mbedtls/issues/5136",
+        "https://lists.debian.org/debian-lts-announce/2022/12/msg00036.html",
+        "https://github.com/ARMmbed/mbedtls/issues/5136",
+        "https://lists.debian.org/debian-lts-announce/2022/12/msg00036.html",
+        "https://lists.debian.org/debian-lts-announce/2025/06/msg00034.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-43666",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2023-52353",
+      "description": "An issue was discovered in Mbed TLS through 3.5.1. In mbedtls_ssl_session_reset, the maximum negotiable TLS version is mishandled. For example, if the last connection negotiated TLS 1.2, then 1.2 becomes the new maximum.",
+      "published": "2024-01-21T23:15:44.220",
+      "modified": "2026-06-17T06:42:32.950",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+      },
+      "severity": "high",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls/issues/8654",
+        "https://github.com/Mbed-TLS/mbedtls/issues/8654"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52353",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2026-34871",
+      "description": "An issue was discovered in Mbed TLS before 3.6.6 and 4.x before 4.1.0 and TF-PSA-Crypto before 1.1.0. There is a Predictable Seed in a Pseudo-Random Number Generator (PRNG).",
+      "published": "2026-04-01T19:16:33.267",
+      "modified": "2026-06-17T10:39:45.903",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-dev-random/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34871",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-54764",
+      "description": "Mbed TLS before 3.6.5 allows a local timing attack against certain RSA operations, and direct calls to mbedtls_mpi_mod_inv or mbedtls_mpi_gcd.",
+      "published": "2025-10-20T22:15:37.060",
+      "modified": "2026-11-05T22:10:00.203",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.2,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2025-10-ssbleed-mstep/",
+        "https://mbed-tls.readthedocs.io/en/latest/tech-updates/security-advisories/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54764",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-27809",
+      "description": "Mbed TLS before 2.28.10 and 3.x before 3.6.3, on the client side, accepts servers that have trusted certificates for arbitrary hostnames unless the TLS client application calls mbedtls_ssl_set_hostname.",
+      "published": "2025-03-25T06:15:41.000",
+      "modified": "2026-06-17T09:04:15.590",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.4,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls/releases",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2025-03-1/",
+        "https://github.com/Mbed-TLS/mbedtls/issues/466",
+        "https://mastodon.social/@bagder/114219540623402700"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27809",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-27810",
+      "description": "Mbed TLS before 2.28.10 and 3.x before 3.6.3, in some cases of failed memory allocation or hardware errors, uses uninitialized stack memory to compose the TLS Finished message, potentially leading to authentication bypasses such as replays.",
+      "published": "2025-03-25T06:15:41.180",
+      "modified": "2026-06-17T09:04:15.710",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.4,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls/releases",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2025-03-2/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27810",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-59438",
+      "description": "Mbed TLS through 3.6.4 has an Observable Timing Discrepancy.",
+      "published": "2025-10-21T15:15:39.103",
+      "modified": "2026-11-05T22:10:00.203",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.3,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2025-10-invalid-padding-error/",
+        "https://mbed-tls.readthedocs.io/en/latest/tech-updates/security-advisories/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59438",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-66442",
+      "description": "In Mbed TLS through 4.0.0, there is a compiler-induced timing side channel (in RSA and CBC/ECB decryption) that only occurs with LLVM's select-optimize feature. TF-PSA-Crypto through 1.0.0 is also affected.",
+      "published": "2026-04-01T20:16:22.107",
+      "modified": "2026-11-04T22:10:00.210",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.1,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      },
+      "severity": "medium",
+      "references": [
+        "https://github.com/Mbed-TLS/TF-PSA-Crypto/releases",
+        "https://github.com/Mbed-TLS/mbedtls/releases",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/",
+        "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-compiler-induced-constant-time-violations/"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66442",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-52497",
+      "description": "Mbed TLS before 3.6.4 has a PEM parsing one-byte heap-based buffer underflow, in mbedtls_pem_read_buffer and two mbedtls_pk_parse functions, via untrusted PEM input.",
+      "published": "2025-07-04T15:15:22.787",
+      "modified": "2026-06-17T09:36:36.253",
+      "cvss": {
+        "version": "3.1",
+        "score": 4.8,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L"
+      },
+      "severity": "medium",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls-docs/blob/main/security-advisories/mbedtls-security-advisory-2025-06-2.md",
+        "https://lists.debian.org/debian-lts-announce/2025/08/msg00013.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52497",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    },
+    {
+      "id": "CVE-2025-48965",
+      "description": "Mbed TLS before 3.6.4 has a NULL pointer dereference because mbedtls_asn1_store_named_data can trigger conflicting data with val.p of NULL but val.len greater than zero.",
+      "published": "2025-07-20T18:15:22.950",
+      "modified": "2026-06-17T09:30:35.387",
+      "cvss": {
+        "version": "3.1",
+        "score": 4.0,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:L"
+      },
+      "severity": "medium",
+      "references": [
+        "https://github.com/Mbed-TLS/mbedtls-docs/blob/main/security-advisories/mbedtls-security-advisory-2025-06-6.md",
+        "https://mbed-tls.readthedocs.io/en/latest/tech-updates/security-advisories/",
+        "https://lists.debian.org/debian-lts-announce/2025/08/msg00013.html"
+      ],
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48965",
+      "component": "mbedTLS",
+      "component_version": "2.28.9",
+      "match_basis": {
+        "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*",
+        "evidence": "libmbedcrypto.so.2.28.9",
+        "evidence_source": "version-string",
+        "offset": 17508648
+      }
+    }
+  ],
+  "cve_status": {
+    "components_queried": 2,
+    "components_with_versions": 2,
+    "components_without_versions": 0,
+    "errors": []
+  }
+}

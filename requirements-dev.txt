@@ -1,0 +1,5 @@
+# fwtool has NO runtime dependencies: the tool itself is standard-library-only
+# Python (3.11+). This file lists the development dependencies (tests and
+# SBOM schema validation).
+pytest>=7.0
+jsonschema>=4.0

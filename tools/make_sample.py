@@ -26,7 +26,7 @@ STRINGS = [
 
 
 def build():
-    out = bytearray(b"\x00" * 256)              # vector table placeholder
+    out = bytearray(b"\x00" * 256)              # vector table filler: zeroed bytes, not real vectors
     out[0:4] = b"\x2e\xa1\x0f\x20"              # plausible initial SP
     for s in STRINGS:
         out += b"\x00" * 32

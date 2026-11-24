@@ -1,1 +1,7 @@
-pytest>=7.0
+# fwtool has no runtime dependencies: standard-library-only Python 3.11+.
+# Nothing to install to run the tool from source.
+#
+# For development (tests + SBOM schema validation):
+#   pip install -r requirements-dev.txt
+# For building the one-file executable:
+#   pip install pyinstaller

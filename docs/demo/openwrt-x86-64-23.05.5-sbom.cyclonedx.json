@@ -1,0 +1,87 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:5f15b0d1-357a-48af-9883-2d56d57f812d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-17T22:38:58Z",
+    "tools": [
+      {
+        "vendor": "James Marcus Anderson",
+        "name": "fwtool",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "firmware",
+      "bom-ref": "9d11a2f3-64bd-5bc6-862c-24c0589ae7eb",
+      "name": "openwrt-23.05.5-x86-64-generic-ext4-combined.img",
+      "properties": [
+        {
+          "name": "fwtool:format",
+          "value": "raw"
+        },
+        {
+          "name": "fwtool:size-bytes",
+          "value": "126353408"
+        },
+        {
+          "name": "fwtool:sbom-scope",
+          "value": "Component-fingerprint-based SBOM: components were identified from ELF dynamic-section libraries and version-banner strings in the firmware image. This tool version does not extract filesystems, so the inventory is limited to components that leave such a trace. It is not a full extracted-filesystem SBOM."
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "fwtool:sbom-scope",
+        "value": "Component-fingerprint-based SBOM: components were identified from ELF dynamic-section libraries and version-banner strings in the firmware image. This tool version does not extract filesystems, so the inventory is limited to components that leave such a trace. It is not a full extracted-filesystem SBOM."
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "1b628735-2f99-5c22-89dd-9164fad92af7",
+      "name": "BusyBox",
+      "purl": "pkg:generic/busybox@1.36.1",
+      "properties": [
+        {
+          "name": "fwtool:evidence",
+          "value": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)"
+        },
+        {
+          "name": "fwtool:evidence-source",
+          "value": "version-string"
+        },
+        {
+          "name": "fwtool:sbom-scope",
+          "value": "component-fingerprint-based"
+        }
+      ],
+      "version": "1.36.1",
+      "cpe": "cpe:2.3:a:busybox:busybox:1.36.1:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "library",
+      "bom-ref": "4a082786-4886-5933-b523-adb022faaa6f",
+      "name": "mbedTLS",
+      "purl": "pkg:generic/mbedtls@2.28.9",
+      "properties": [
+        {
+          "name": "fwtool:evidence",
+          "value": "libmbedcrypto.so.2.28.9"
+        },
+        {
+          "name": "fwtool:evidence-source",
+          "value": "version-string"
+        },
+        {
+          "name": "fwtool:sbom-scope",
+          "value": "component-fingerprint-based"
+        }
+      ],
+      "version": "2.28.9",
+      "cpe": "cpe:2.3:a:arm:mbed_tls:2.28.9:*:*:*:*:*:*:*"
+    }
+  ]
+}
