@@ -1,0 +1,61 @@
+name: release
+# Builds one-file fwtool executables for Linux, Windows, and macOS.
+# Runs on every push (artifacts only) and on version tags (GitHub Release).
+# The Linux binary is also built and verified locally; Windows and macOS
+# binaries ONLY exist once this workflow has run — they cannot be built
+# on a Linux machine.
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+jobs:
+  build:
+    name: build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            asset: fwtool-1.0.0-linux-x86_64
+          - os: windows-latest
+            asset: fwtool-1.0.0-windows-x86_64.exe
+          - os: macos-latest
+            asset: fwtool-1.0.0-macos-arm64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install pyinstaller
+      - run: pyinstaller --noconfirm fwtool.spec
+      - run: |
+          if [ -f dist/fwtool.exe ]; then mv dist/fwtool.exe "dist/${{ matrix.asset }}";
+          else mv dist/fwtool "dist/${{ matrix.asset }}"; fi
+        shell: bash
+      - run: ./dist/${{ matrix.asset }} --version
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.asset }}
+          path: dist/${{ matrix.asset }}
+
+  release:
+    name: publish release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+      - run: ls -la artifacts
+      - run: |
+          gh release create "${{ github.ref_name }}" artifacts/* \
+            --title "fwtool ${{ github.ref_name }}" \
+            --notes "One-file executables for Linux, Windows, and macOS. No Python needed — download, run, scan. See CHANGELOG.md for what is in this version and its honest limits."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
