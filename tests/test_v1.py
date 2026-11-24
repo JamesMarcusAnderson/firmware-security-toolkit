@@ -6,6 +6,7 @@ mocked HTTP layer — no network calls are made.
 """
 import json
 import pathlib
+import shutil
 import struct
 import subprocess
 import sys
@@ -153,9 +154,20 @@ def test_banner_version_upgrades_soname_record(tmp_path):
 
 def test_real_binary_dynamic_section_matches_readelf():
     """Cross-check against the system readelf on /bin/ls."""
+    readelf = shutil.which("readelf")
+    if readelf is None:
+        pytest.skip("readelf not available")
+    out = subprocess.run(
+        [readelf, "-d", "/bin/ls"],
+        capture_output=True, text=True, check=True,
+    ).stdout
+    expected = [
+        line.split("[", 1)[1].split("]", 1)[0]
+        for line in out.splitlines()
+        if "(NEEDED)" in line
+    ]
     data = pathlib.Path("/bin/ls").read_bytes()
-    assert fingerprint._parse_elf_dynamic(data) == \
-        ["libselinux.so.1", "libc.so.6"]
+    assert fingerprint._parse_elf_dynamic(data) == expected
 
 
 # ------------------------------------------------------------------------ cve
