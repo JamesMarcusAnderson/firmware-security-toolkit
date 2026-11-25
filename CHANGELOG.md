@@ -1,5 +1,11 @@
 # Changelog
 
+## Note — 2026-11-24
+
+Product renamed to FirmwareScope. The Python module, the binary,
+and the release assets are now `firmwarescope`; version stays
+1.0.0 and the price is unchanged.
+
 ## 1.0.0 — 2026-11-17
 
 First sale-ready release. Built from the 0.x demo CLI
@@ -42,7 +48,7 @@ pattern categories).
   say what the code does. (Found while fact-checking the audit's
   build-readiness list — see PACKAGING-REPORT.md.)
 - **Packaging.** One-file executables via PyInstaller
-  (`fwtool.spec`); Linux binary built and verified here.
+  (`firmwarescope.spec`); Linux binary built and verified here.
   GitHub Actions workflow (`.github/workflows/release.yml`)
   builds Linux, Windows, and macOS binaries on push and publishes
   them on version tags.

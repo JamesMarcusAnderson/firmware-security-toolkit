@@ -13,8 +13,8 @@ import sys
 
 import pytest
 
-from fwtool import cve, detect, fingerprint, htmlreport, sbom, strings, vuln
-from fwtool.main import build_report
+from firmwarescope import cve, detect, fingerprint, htmlreport, sbom, strings, vuln
+from firmwarescope.main import build_report
 
 REPO = pathlib.Path(__file__).parent.parent
 FIXTURES = pathlib.Path(__file__).parent / "fixtures"
@@ -564,10 +564,10 @@ def test_new_chip_markers(tmp_path):
 # ----------------------------------------------------------------------- main
 
 def test_cli_version():
-    r = subprocess.run([sys.executable, "-m", "fwtool", "--version"],
+    r = subprocess.run([sys.executable, "-m", "firmwarescope", "--version"],
                        cwd=REPO, capture_output=True, text=True)
     assert r.returncode == 0
-    assert r.stdout.strip() == "fwtool 1.0.0"
+    assert r.stdout.strip() == "firmwarescope 1.0.0"
 
 
 def test_cli_writes_html_and_sboms_offline(tmp_path):
@@ -577,7 +577,7 @@ def test_cli_writes_html_and_sboms_offline(tmp_path):
     cdx_path = tmp_path / "sbom.cdx.json"
     spdx_path = tmp_path / "sbom.spdx.json"
     r = subprocess.run(
-        [sys.executable, "-m", "fwtool", str(src), "--vulns",
+        [sys.executable, "-m", "firmwarescope", str(src), "--vulns",
          "--html", str(html_path),
          "--sbom-cyclonedx", str(cdx_path),
          "--sbom-spdx", str(spdx_path)],
@@ -597,7 +597,7 @@ def test_build_report_carries_limits_and_tool_version(tmp_path):
     p = tmp_path / "f.bin"
     p.write_bytes(b"hello\x00")
     report = build_report(str(p))
-    assert report["tool"] == {"name": "fwtool", "version": "1.0.0"}
+    assert report["tool"] == {"name": "firmwarescope", "version": "1.0.0"}
     assert report["scanned_at"]
     assert any("does not extract filesystems" in item.lower()
                or "No filesystem extraction" in item for item in report["limits"])

@@ -1,7 +1,7 @@
 # Demo scan — OpenWrt 23.05.5 (x86-64)
 
 A real scan of a real public firmware image, so you can see what
-fwtool's output looks like before paying for it.
+FirmwareScope's output looks like before paying for it.
 
 ## What was scanned
 
@@ -14,12 +14,12 @@ fwtool's output looks like before paying for it.
   `f5c77659a33bd43cba105cf2f75e56d054fa9e0b9a73dc9f2a5bcb0e126ff7d5`
 - **Scanned file:** the gunzipped image,
   `openwrt-23.05.5-x86-64-generic-ext4-combined.img`
-  (126,353,408 bytes). fwtool v1 identifies gzip containers but does
+  (126,353,408 bytes). FirmwareScope v1 identifies gzip containers but does
   not unpack them, so the image was gunzipped before scanning — that
   is the documented v1 boundary, not a hidden step.
 - **Command:**
-  `fwtool openwrt-23.05.5-x86-64-generic-ext4-combined.img --all`
-  (run 2026-11-17, fwtool v1.0.0)
+  `firmwarescope openwrt-23.05.5-x86-64-generic-ext4-combined.img --all`
+  (run 2026-11-17, FirmwareScope v1.0.0)
 
 ## What it found
 

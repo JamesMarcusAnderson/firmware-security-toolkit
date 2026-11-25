@@ -8,7 +8,7 @@
     "tools": [
       {
         "vendor": "James Marcus Anderson",
-        "name": "fwtool",
+        "name": "firmwarescope",
         "version": "1.0.0"
       }
     ],
@@ -18,22 +18,22 @@
       "name": "openwrt-23.05.5-x86-64-generic-ext4-combined.img",
       "properties": [
         {
-          "name": "fwtool:format",
+          "name": "firmwarescope:format",
           "value": "raw"
         },
         {
-          "name": "fwtool:size-bytes",
+          "name": "firmwarescope:size-bytes",
           "value": "126353408"
         },
         {
-          "name": "fwtool:sbom-scope",
+          "name": "firmwarescope:sbom-scope",
           "value": "Component-fingerprint-based SBOM: components were identified from ELF dynamic-section libraries and version-banner strings in the firmware image. This tool version does not extract filesystems, so the inventory is limited to components that leave such a trace. It is not a full extracted-filesystem SBOM."
         }
       ]
     },
     "properties": [
       {
-        "name": "fwtool:sbom-scope",
+        "name": "firmwarescope:sbom-scope",
         "value": "Component-fingerprint-based SBOM: components were identified from ELF dynamic-section libraries and version-banner strings in the firmware image. This tool version does not extract filesystems, so the inventory is limited to components that leave such a trace. It is not a full extracted-filesystem SBOM."
       }
     ]
@@ -46,15 +46,15 @@
       "purl": "pkg:generic/busybox@1.36.1",
       "properties": [
         {
-          "name": "fwtool:evidence",
+          "name": "firmwarescope:evidence",
           "value": "BusyBox v1.36.1 (2024-09-23 12:34:46 UTC)"
         },
         {
-          "name": "fwtool:evidence-source",
+          "name": "firmwarescope:evidence-source",
           "value": "version-string"
         },
         {
-          "name": "fwtool:sbom-scope",
+          "name": "firmwarescope:sbom-scope",
           "value": "component-fingerprint-based"
         }
       ],
@@ -68,15 +68,15 @@
       "purl": "pkg:generic/mbedtls@2.28.9",
       "properties": [
         {
-          "name": "fwtool:evidence",
+          "name": "firmwarescope:evidence",
           "value": "libmbedcrypto.so.2.28.9"
         },
         {
-          "name": "fwtool:evidence-source",
+          "name": "firmwarescope:evidence-source",
           "value": "version-string"
         },
         {
-          "name": "fwtool:sbom-scope",
+          "name": "firmwarescope:sbom-scope",
           "value": "component-fingerprint-based"
         }
       ],

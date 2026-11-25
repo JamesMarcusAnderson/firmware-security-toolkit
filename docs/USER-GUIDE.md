@@ -1,11 +1,11 @@
-# fwtool user guide (v1.0.0)
+# FirmwareScope user guide (v1.0.0)
 
-## What fwtool is for
+## What FirmwareScope is for
 
 You have a firmware image — a router update file, a camera firmware
 download, a dump from a device — and you want to know: what is in it,
 what is wrong with it, and which known vulnerabilities affect it?
-fwtool answers that in one command, with a report you can hand to
+FirmwareScope answers that in one command, with a report you can hand to
 someone who is not a reverse engineer.
 
 It is a triage tool, not a certification. It tells you what it can
@@ -16,7 +16,7 @@ see and prove, and it says plainly what it cannot see.
 The full scan runs every analysis and writes every output:
 
 ```bash
-fwtool firmware.bin --all --html report.html \
+firmwarescope firmware.bin --all --html report.html \
   --sbom-cyclonedx sbom.cyclonedx.json --sbom-spdx sbom.spdx.json \
   --out report.json
 ```
@@ -47,7 +47,7 @@ Outputs:
 SBOM-only run is just:
 
 ```bash
-fwtool firmware.bin --sbom-cyclonedx sbom.json
+firmwarescope firmware.bin --sbom-cyclonedx sbom.json
 ```
 
 Exit codes: 0 means the scan ran; 2 means the input file could not
@@ -92,7 +92,7 @@ and in the report, so you can see what was found but not checked.
 
 ## How the CVE lookup works
 
-For each versioned component, fwtool builds a CPE name
+For each versioned component, FirmwareScope builds a CPE name
 (Common Platform Enumeration — the standard way to name a software
 product and version) and asks the public NVD API for CVEs recorded
 against it. No account or key is needed. Without a key the NVD
@@ -100,7 +100,7 @@ allows 5 requests per 30 seconds, so the tool waits about 6
 seconds between lookups; with a key (`NVD_API_KEY` environment
 variable or `--api-key`) the limit is 50 per 30 seconds and the
 tool waits 0.6 seconds. Results are cached under
-`~/.cache/fwtool/nvd/` for 7 days (`--cache-dir` changes the
+`~/.cache/firmwarescope/nvd/` for 7 days (`--cache-dir` changes the
 location), so repeat scans make no network calls.
 
 A CVE finding means NVD records that component version as

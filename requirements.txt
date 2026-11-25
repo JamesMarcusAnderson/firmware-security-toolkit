@@ -1,4 +1,4 @@
-# fwtool has no runtime dependencies: standard-library-only Python 3.11+.
+# FirmwareScope has no runtime dependencies: standard-library-only Python 3.11+.
 # Nothing to install to run the tool from source.
 #
 # For development (tests + SBOM schema validation):

@@ -1,6 +1,6 @@
 # Test fixtures: SBOM schemas
 
-Official JSON Schemas for the SBOM formats fwtool writes, downloaded
+Official JSON Schemas for the SBOM formats firmwarescope writes, downloaded
 2026-11-17 for offline validation in the test suite:
 
 - bom-1.6.schema.json — CycloneDX 1.6 JSON schema

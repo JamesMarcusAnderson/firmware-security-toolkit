@@ -1,11 +1,13 @@
-# fwtool — firmware security analysis
+# FirmwareScope — firmware security analysis
+
+Renamed from fwtool on 2026-11-24.
 
 **Version 1.0.0.** One command turns a firmware image into a readable
 security report: what is in it, what is wrong with it, which public
 CVEs affect its components, and a software bill of materials (SBOM).
 
 ```bash
-fwtool router-firmware.bin --all --html report.html --sbom-cyclonedx sbom.json
+firmwarescope router-firmware.bin --all --html report.html --sbom-cyclonedx sbom.json
 ```
 
 No Python needed for the download: the Linux release is a one-file
@@ -55,23 +57,23 @@ for those versions, and 14 pattern findings. The demo README
 records the exact download URL, date, checksum, and command so you
 can reproduce it.
 
-Buy the tool (one-time purchase, all three platforms) at the fwtool product site: https://jamesmarcusanderson.github.io/fwtool/
+Buy the tool (one-time purchase, all three platforms) at the FirmwareScope product site: https://jamesmarcusanderson.github.io/firmwarescope/
 
 ## Install
 
 **Download (easiest):** get the one-file executable for your system
 from [the releases page](https://github.com/JamesMarcusAnderson/firmware-security-toolkit/releases), and run it. Nothing else to install.
 
-- Linux x86-64: `fwtool-1.0.0-linux-x86_64` (available now)
-- Windows x86-64: `fwtool-1.0.0-windows-x86_64.exe` (ships with the
+- Linux x86-64: `firmwarescope-1.0.0-linux-x86_64` (available now)
+- Windows x86-64: `firmwarescope-1.0.0-windows-x86_64.exe` (ships with the
   first release)
-- macOS Apple Silicon: `fwtool-1.0.0-macos-arm64` (ships with the
+- macOS Apple Silicon: `firmwarescope-1.0.0-macos-arm64` (ships with the
   first release; Intel Macs: run from source below.)
 
 **From source:** Python 3.11+ and nothing else.
 
 ```bash
-python -m fwtool firmware.bin --all
+python -m firmwarescope firmware.bin --all
 ```
 
 ## Quickstart
@@ -79,21 +81,21 @@ python -m fwtool firmware.bin --all
 ```bash
 # Make a demo image and scan it
 python tools/make_sample.py sample.bin
-fwtool sample.bin --vulns --sections
+firmwarescope sample.bin --vulns --sections
 
 # Full scan: everything, with all outputs
-fwtool firmware.bin --all --html report.html \
+firmwarescope firmware.bin --all --html report.html \
   --sbom-cyclonedx sbom.cyclonedx.json --sbom-spdx sbom.spdx.json
 
 # Just the CVE check (implies component fingerprinting)
-fwtool firmware.bin --cve --json
+firmwarescope firmware.bin --cve --json
 
 # Just the SBOM (implies component fingerprinting)
-fwtool firmware.bin --sbom-cyclonedx sbom.json
+firmwarescope firmware.bin --sbom-cyclonedx sbom.json
 ```
 
 Full options and worked examples: `docs/USER-GUIDE.md`.
-`fwtool --help` lists every flag.
+`firmwarescope --help` lists every flag.
 
 ## Honest limits
 

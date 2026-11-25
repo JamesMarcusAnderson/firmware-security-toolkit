@@ -1,7 +1,7 @@
 {
   "file": "sample.bin",
   "tool": {
-    "name": "fwtool",
+    "name": "firmwarescope",
     "version": "1.0.0"
   },
   "scanned_at": "2026-11-17T22:40:24Z",
