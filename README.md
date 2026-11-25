@@ -55,10 +55,12 @@ for those versions, and 14 pattern findings. The demo README
 records the exact download URL, date, checksum, and command so you
 can reproduce it.
 
+Buy the tool (one-time purchase, all three platforms) at the fwtool product site: https://jamesmarcusanderson.github.io/fwtool/
+
 ## Install
 
 **Download (easiest):** get the one-file executable for your system
-from the releases page, and run it. Nothing else to install.
+from [the releases page](https://github.com/JamesMarcusAnderson/firmware-security-toolkit/releases), and run it. Nothing else to install.
 
 - Linux x86-64: `fwtool-1.0.0-linux-x86_64` (available now)
 - Windows x86-64: `fwtool-1.0.0-windows-x86_64.exe` (ships with the
