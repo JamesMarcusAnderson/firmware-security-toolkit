@@ -11,3 +11,16 @@ jobs:
       - run: python -m py_compile firmwarescope/detect.py firmwarescope/strings.py firmwarescope/sections.py firmwarescope/vuln.py firmwarescope/main.py
       - run: python -m pytest tests -q
       - run: python -c "import json; json.load(open('docs/sample-report.json'))"
+      - run: |
+          python -c "
+          import json
+          from jsonschema import validate
+          from firmwarescope import sbom
+          report = {'file': 'ci.bin', 'identify': {'format': 'raw', 'size': 1, 'chip_markers': []},
+                    'components': [{'name': 'OpenSSL', 'version': '1.1.1k', 'evidence': 'OpenSSL 1.1.1k',
+                                    'evidence_source': 'version-string', 'offset': 0,
+                                    'cpe': 'cpe:2.3:a:openssl:openssl:1.1.1k:*:*:*:*:*:*:*'}]}
+          validate(sbom.cyclonedx(report, '1.0.0'), json.load(open('tests/fixtures/bom-1.6.schema.json')))
+          validate(sbom.spdx(report, '1.0.0'), json.load(open('tests/fixtures/spdx-schema.json')))
+          print('SBOM schemas: OK')
+          "
